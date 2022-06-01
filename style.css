@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 500px;
+  aspect-ratio: 1;
+  margin: 25vh auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+}
+.container::before {
+  content: "Code perfect";
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-size: 5rem;
+  z-index: -1;
+  font-weight: 500;
+  color: steelblue;
+}
+
+.container:hover .box1 {
+  transform: translateX(-100%) translateY(-100%) rotateZ(0.25turn);
+}
+.container:hover .box2 {
+  transform: translateY(-100%) rotateX(-0.5turn);
+}
+.container:hover .box3 {
+  transform: translateX(100%) translateY(-100%) rotateZ(-0.25turn);
+}
+.container:hover .box4 {
+  transform: translateX(-100%) rotateX(0.5turn);
+}
+.container:hover .box5 {
+  transform: scale(0);
+}
+.container:hover .box6 {
+  transform: translateX(100%) rotateX(-0.5turn);
+}
+.container:hover .box7 {
+  transform: translateX(-100%) translateY(100%) rotateZ(-0.25turn);
+}
+.container:hover .box8 {
+  transform: translateY(100%) rotateX(0.5turn);
+}
+.container:hover .box9 {
+  transform: translateY(100%) translateX(100%) rotateZ(0.25turn);
+}
+.box {
+  transition: transform 1000ms;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.box1 {
+  background-color: steelblue;
+}
+.box2 {
+  background-color: dimgray;
+  transition-delay: 500ms;
+}
+.box3 {
+  background-color: yellow;
+  transition-delay: 1000ms;
+}
+.box4 {
+  background-color: rosybrown;
+  transition-delay: 1500ms;
+}
+.box5 {
+  background-color: steelblue;
+  transition-delay: 2000ms;
+}
+.box6 {
+  background-color: dimgray;
+  transition-delay: 2500ms;
+}
+.box7 {
+  background-color: yellow;
+  transition-delay: 3000ms;
+}
+.box8 {
+  background-color: rosybrown;
+  transition-delay: 3500ms;
+}
+.box9 {
+  background-color: steelblue;
+  transition-delay: 4000ms;
+}
